@@ -7,6 +7,9 @@ if (isNull _oldUnit) exitWith {};
 
 waitUntil {alive player};
 
+player enableFatigue false;
+player setCustomAimCoef 0.2;
+
 //When LAN hosting, Bohemia's Zeus module code will cause the player lose Zeus access if the body is deleted after respawning.
 //This is a workaround that re-assigns curator to the player if their body is deleted.
 //It will only run on LAN hosted MP, where the hoster is *always* admin, so we shouldn't run into any issues.
